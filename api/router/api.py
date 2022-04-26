@@ -1,6 +1,7 @@
 from fastapi import APIRouter
-from api.router import apiuser
+from api.router import action
 
 
 router = APIRouter() 
-router.include_router(apiuser.router, tags=["apiuser"], prefix="/apiuser")
+
+router.include_router(action.router, tags=["action"] , prefix="/action")
